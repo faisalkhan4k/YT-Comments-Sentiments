@@ -13,15 +13,22 @@ import matplotlib.dates as mdates
 plt.style.use('ggplot')
 import matplotlib
 from openai import OpenAI
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
+def configure():
+    return os.getenv("api_key")
+    
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 matplotlib.use('Agg')
-
+apiKey = configure()
 client = OpenAI(
   base_url="https://openrouter.ai/api/v1",
-  api_key="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",
+  api_key=apiKey,
 )
 
 
