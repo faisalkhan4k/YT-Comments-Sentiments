@@ -1,7 +1,7 @@
 yt-comment-sentiment-analysis
 ==============================
 
-yt comment sentiment analysis
+yt comment sentiment analysis with product recommendations on the basis on comment sentiments and words used.
 
 Project Organization
 ------------
