@@ -23,7 +23,7 @@ def configure():
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
-
+ 
 matplotlib.use('Agg')
 apiKey = configure()
 client = OpenAI(
