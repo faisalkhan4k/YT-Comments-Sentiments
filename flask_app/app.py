@@ -41,7 +41,7 @@ vectorizer = joblib.load('tfidf_vectorizer.pkl')
 print('Vectorizer loaded!')
 
 def get_product_recommendations(wordcloud_text, sentiment_summary):
-    """Get product recommendations based on word cloud and sentiment analysis."""
+    """Get product recommendations based on word clo ud and sentiment analysis."""
     prompt = f"""
     Based on the following insights:
     1. Most used words: {wordcloud_text}
@@ -49,6 +49,9 @@ def get_product_recommendations(wordcloud_text, sentiment_summary):
 
     Suggest 3-5 products to advertise that align with the audience's interests and sentiments.
     Provide a brief explanation in HTML code so that i can include it in my frontend, give only and only code.
+
+    Also add css to the html with a lots of emojis. make the css with black background and yellow text color Also add approx cost of the product in green if reasonable
+    if u think the price is overpriced make the color of price in red.
     """
 
     completion = client.chat.completions.create(
@@ -122,7 +125,7 @@ def preprocess_comment(comment):
         stop_words = set(stopwords.words('english')) - {'not', 'but', 'however', 'no', 'yet'}
         comment = ' '.join([word for word in comment.split() if word not in stop_words])
 
-        # Lemmatize the words
+        # Lemmatize the words jumping to jump
         lemmatizer = WordNetLemmatizer()
         comment = ' '.join([lemmatizer.lemmatize(word) for word in comment.split()])
 
