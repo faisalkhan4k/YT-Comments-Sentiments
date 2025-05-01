@@ -1,5 +1,6 @@
 yt-comment-sentiment-analysis
 ==============================
+<img src='./Screenshot 2025-04-09 130221.png'>
 
 Chrome plugin for yt comment sentiment analysis with product recommendations on the basis on comment sentiments and words used.
 
