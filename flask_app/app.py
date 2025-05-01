@@ -51,7 +51,7 @@ def get_product_recommendations(wordcloud_text, sentiment_summary):
     Provide a brief explanation in HTML code so that i can include it in my frontend, give only and only code.
 
     Also add css to the html with a lots of emojis. make the css with black background and yellow text color Also add approx cost of the product in green if reasonable
-    if u think the price is overpriced make the color of price in red.
+    if u think the price is overpriced make the color of price in red. give the HTML code a h1 heading saying "products this fanbase may like!!!"
     """
 
     completion = client.chat.completions.create(
