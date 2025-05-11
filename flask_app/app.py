@@ -43,15 +43,30 @@ print('Vectorizer loaded!')
 def get_product_recommendations(wordcloud_text, sentiment_summary):
     """Get product recommendations based on word clo ud and sentiment analysis."""
     prompt = f"""
-    Based on the following insights:
-    1. Most used words: {wordcloud_text}
-    2. Sentiment analysis summary: {sentiment_summary}
+        Based on the following insights:
 
-    Suggest 3-5 products to advertise that align with the audience's interests and sentiments.
-    Provide a brief explanation in HTML code so that i can include it in my frontend, give only and only code.
+        Most frequently used words: {wordcloud_text}
 
-    Also add css to the html with a lots of emojis. make the css with black background and yellow text color Also add approx cost of the product in green if reasonable
-    if u think the price is overpriced make the color of price in red. Write a heading in the start stating this are some of the products fanbase is looking for
+        Sentiment analysis summary: {sentiment_summary}
+
+        Please suggest 3-5 products to advertise that align with the audience's interests and emotional tone.
+
+        Provide the recommendations in HTML format for direct frontend integration. Include:
+
+        🛍️ Product suggestions with emojis
+
+        👍 What users want in products (based on comments)
+
+        👎 What users dislike about similar products
+
+        💰 Price indicators:
+
+        Green for reasonably priced items
+
+        Red for overpriced items
+
+        Use a black background with yellow text in the CSS.
+        Add the heading: "Products Your Community is Searching For"
     """
 
     completion = client.chat.completions.create(
