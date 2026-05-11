@@ -3,7 +3,8 @@ yt-comment-sentiment-analysis
 <img src='./Screenshot 2025-04-09 130221.png'>
 
 Chrome plugin for yt comment sentiment analysis with product recommendations on the basis on comment sentiments and words used.
-
+Engineered a YouTube sentiment analysis engine using LightGBM and TF-IDF vectorization, implementing SMOTE to resolve class imbalance in training data; integrated the system into a Chrome Extension to deliver real-time consumer sentiment scores from video metadata
+Architected a recommendation engine leveraging the DeepSeek R1 model via OpenRouter API; utilized advanced prompt engineering and MLflow for experiment tracking to automate the suggestion of alternative products based on extracted user intent and review sentiment.
 Project Organization
 ------------
 
